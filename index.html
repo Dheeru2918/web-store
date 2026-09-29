@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">📱 AppStore</div>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search apps...">
+    </div>
+    <button id="themeBtn">🌙</button>
+</header>
+
+<nav>
+    <button class="category active" data-category="All">All</button>
+    <button class="category" data-category="Games">Games</button>
+    <button class="category" data-category="Education">Education</button>
+    <button class="category" data-category="Social">Social</button>
+    <button class="category" data-category="Music">Music</button>
+    <button class="category" data-category="Tools">Tools</button>
+</nav>
+
+<main>
+    <h1>Popular Apps</h1>
+    <div id="appContainer" class="app-container"></div>
+</main>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="closeBtn" class="close">&times;</span>
+        <div id="modalIcon" class="modal-icon"></div>
+        <h2 id="modalName"></h2>
+        <p id="modalCategory"></p>
+        <p id="modalDescription"></p>
+        <p id="modalRating"></p>
+        <button id="installBtn" class="install-btn">Install</button>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 AppStore | Built with HTML, CSS & JavaScript</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

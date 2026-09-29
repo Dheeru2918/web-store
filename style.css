@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #222;
+    transition: 0.3s;
+}
+
+header {
+    background: #e60000;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.search-box {
+    flex: 1;
+    max-width: 500px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+
+#themeBtn {
+    border: none;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+nav {
+    background: white;
+    padding: 15px 8%;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+}
+
+.category {
+    padding: 9px 18px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.category:hover,
+.category.active {
+    background: #e60000;
+    color: white;
+}
+
+main {
+    width: 84%;
+    margin: 30px auto;
+}
+
+main h1 {
+    margin-bottom: 25px;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.app-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+}
+
+.app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    background: #e60000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.app-card h2 {
+    margin-bottom: 7px;
+}
+
+.category-name {
+    color: #777;
+    font-size: 14px;
+}
+
+.rating {
+    margin: 10px 0;
+}
+
+.install-btn {
+    width: 100%;
+    padding: 11px;
+    background: #e60000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.install-btn:hover {
+    background: #b90000;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal-icon {
+    width: 100px;
+    height: 100px;
+    background: #e60000;
+    color: white;
+    border-radius: 20px;
+    margin: 10px auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.modal-content p {
+    margin: 12px 0;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 25px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark nav,
+body.dark .app-card,
+body.dark .modal-content {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark .category {
+    background: #1e1e1e;
+    color: white;
+    border-color: #444;
+}
+
+body.dark .category.active {
+    background: #e60000;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    #themeBtn {
+        width: 45px;
+        margin: auto;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .app-container {
+        grid-template-columns: 1fr;
+    }
+}
